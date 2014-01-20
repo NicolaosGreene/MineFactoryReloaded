@@ -80,6 +80,7 @@ import powercrystals.minefactoryreloaded.block.ItemBlockFactoryGlass;
 import powercrystals.minefactoryreloaded.block.ItemBlockFactoryGlassPane;
 import powercrystals.minefactoryreloaded.block.ItemBlockFactoryMachine;
 import powercrystals.minefactoryreloaded.block.ItemBlockFactoryRoad;
+import powercrystals.minefactoryreloaded.block.ItemBlockFactoryTree;
 import powercrystals.minefactoryreloaded.block.ItemBlockRedNetLogic;
 import powercrystals.minefactoryreloaded.block.ItemBlockRedNetPanel;
 import powercrystals.minefactoryreloaded.block.ItemBlockVanillaIce;
@@ -472,7 +473,7 @@ public class MineFactoryReloadedCore extends BaseMod
 		GameRegistry.registerBlock(factoryDecorativeStoneBlock, ItemBlockDecorativeStone.class, factoryDecorativeStoneBlock.getUnlocalizedName());
 		GameRegistry.registerBlock(rubberWoodBlock, rubberWoodBlock.getUnlocalizedName());
 		GameRegistry.registerBlock(rubberLeavesBlock, rubberLeavesBlock.getUnlocalizedName());
-		GameRegistry.registerBlock(rubberSaplingBlock, rubberSaplingBlock.getUnlocalizedName());
+		GameRegistry.registerBlock(rubberSaplingBlock, ItemBlockFactoryTree.class, rubberSaplingBlock.getUnlocalizedName());
 		GameRegistry.registerBlock(railPickupCargoBlock, railPickupCargoBlock.getUnlocalizedName());
 		GameRegistry.registerBlock(railDropoffCargoBlock, railDropoffCargoBlock.getUnlocalizedName());
 		GameRegistry.registerBlock(railPickupPassengerBlock, railPickupPassengerBlock.getUnlocalizedName());
@@ -493,8 +494,8 @@ public class MineFactoryReloadedCore extends BaseMod
 		GameRegistry.registerBlock(chocolateMilkLiquid, chocolateMilkLiquid.getUnlocalizedName());
 		GameRegistry.registerBlock(mushroomSoupLiquid, mushroomSoupLiquid.getUnlocalizedName());
 		
-		Block.setBurnProperties(rubberWoodBlock.blockID, 4, 20);
-		Block.setBurnProperties(rubberLeavesBlock.blockID, 30, 20);
+		Block.setBurnProperties(rubberWoodBlock.blockID, 8, 25);
+		Block.setBurnProperties(rubberLeavesBlock.blockID, 30, 25);
 		Block.setBurnProperties(detCordBlock.blockID, 10, 20);
 		
 		MinecraftForge.setBlockHarvestLevel(MineFactoryReloadedCore.rednetCableBlock, 0, "pickaxe", 0);
@@ -576,6 +577,7 @@ public class MineFactoryReloadedCore extends BaseMod
 		ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(new WeightedRandomChestContent(new ItemStack(safariNetSingleItem), 1, 1, 25));
 		ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(safariNetSingleItem), 1, 1, 25));
 		ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_JUNGLE_DISPENSER).addItem(new WeightedRandomChestContent(VillageTradeHandler.getHiddenNetStack(), 1, 1, 25));
+		ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_JUNGLE_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(rubberSaplingBlock, 1, 1), 1, 2, 1));
 		
 		VillagerRegistry.instance().registerVillageCreationHandler(new VillageCreationHandler());
 		VillagerRegistry.instance().registerVillagerId(MFRConfig.zoolologistEntityId.getInt());

@@ -1,7 +1,5 @@
 package powercrystals.minefactoryreloaded.core;
 
-import cpw.mods.fml.common.FMLLog;
-
 import powercrystals.core.position.BlockPosition;
 
 public class BlockPool
@@ -172,7 +170,6 @@ public class BlockPool
 	
 	public long size()
 	{
-		FMLLog.fine("%s[%s]: %s", this == pool ? "global" : "local", System.identityHashCode(this), size);
 		return size;
 	}
 }

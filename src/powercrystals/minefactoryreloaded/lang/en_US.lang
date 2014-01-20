@@ -136,6 +136,7 @@ tile.mfr.vinescaffold.name = Vine Scaffolding
 tile.mfr.detcord.name = DetCord
 
 tile.mfr.rubberwood.sapling.name = Rubber Sapling
+tile.mfr.rubberwood.sapling.massive.name = Sacred Rubber Sapling
 tile.mfr.rubberwood.log.name = Rubber Wood
 tile.mfr.rubberwood.leaves.name = Rubber Leaves
 

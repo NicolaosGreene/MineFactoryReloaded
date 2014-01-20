@@ -299,7 +299,7 @@ public class MFRConfig
 		colorblindMode = c.get(Configuration.CATEGORY_GENERAL, "RedNet.EnableColorblindMode", false);
 		colorblindMode.comment = "Set to true to enable the RedNet GUI's colorblind mode.";
 		deleteEntry(Configuration.CATEGORY_GENERAL, "SearchDistance.TreeMaxHoriztonal");
-		treeSearchMaxHorizontal = c.get(Configuration.CATEGORY_GENERAL, "SearchLimit.TreeMaxHorizontal", 40);
+		treeSearchMaxHorizontal = c.get(Configuration.CATEGORY_GENERAL, "SearchLimit.TreeMaxHorizontal", 200);
 		treeSearchMaxHorizontal.comment = "When searching for parts of a tree, how far out to the sides (radius) to search";
 		deleteEntry(Configuration.CATEGORY_GENERAL, "SearchDistance.TreeMaxVertical");
 		treeSearchMaxVertical = c.get(Configuration.CATEGORY_GENERAL, "SearchLimit.TreeMaxVertical", 256);
